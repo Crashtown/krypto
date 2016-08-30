@@ -1,24 +1,13 @@
 # Krypto
 
-**TODO: Add description**
+Assessment application.
 
-## Installation
+Repo contains generated with `ssh-keygen` rsa 2048 key in `priv` dir.
+At startup app will try to load keys and store it in `Krypto.Server` agent's state.
+Calls to `:public_key` module performed in calling processes.
+Lonely test can be started with `mix test`
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
-  1. Add `krypto` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:krypto, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `krypto` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:krypto]]
-    end
-    ```
-
+### references:
+* [Crypto Tutorial by Joe Armstrong](https://github.com/joearms/crypto_tutorial)
+* [public_key module documentation](http://erlang.org/doc/apps/public_key/introduction.html)
