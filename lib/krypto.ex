@@ -1,0 +1,2 @@
+defmodule Krypto do
+end
