@@ -17,7 +17,8 @@ defmodule Krypto.Mixfile do
   def application do
     [applications: [:logger, :crypto, :public_key],
      env: [pubkey: "id_rsa.pub",
-	   privkey: "id_rsa"]]
+	   privkey: "id_rsa"],
+     mod: {Krypto.Application, []}]
   end
 
   # Dependencies can be Hex packages:
