@@ -2,7 +2,9 @@ defmodule KryptoTest do
   use ExUnit.Case
   doctest Krypto
 
-  test "the truth" do
-    assert 1 + 1 == 2
+  test "encrypt data with pubkey and decrypt with privkey" do
+    data = "wow such secret"
+    cipher = Krypto.encrypt_public(data)
+    assert data == Krypto.decrypt_private(cipher)
   end
 end
